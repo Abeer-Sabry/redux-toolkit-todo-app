@@ -11,6 +11,7 @@ import listStyle from "./ListStyle.module.css";
 import { getTodoAsync } from "../../Redux/todoSlice";
 import { updateRequest } from "../../Redux/updateSlice/updateSlice";
 import { confirmDelete } from "../../Redux/deleteSlice/deleteSlice";
+import Loader from "../Loader/Loader";
 
 const TodoList = () => {
   // REDUX
@@ -24,33 +25,36 @@ const TodoList = () => {
   return (
     <>
       <div className={listStyle.heading}>TodoList</div>
-      {loading ? "loading" : ""}
-      <table className={listStyle.table}>
-        <thead>
-          <tr>
-            <th>Todo</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {todoItems.map(todo => (
-            <tr key={todo.id}>
-              <td>
-                <ListItem id={todo.id} title={todo.title} completed={todo.completed} />
-              </td>
-
-              <td>
-                <ConfirmBtn onClick={() => dispatch(updateRequest(todo))} className="do">
-                  Update
-                </ConfirmBtn>
-                <ConfirmBtn onClick={() => dispatch(confirmDelete(todo))} className="delete">
-                  Delete
-                </ConfirmBtn>
-              </td>
+      {loading ? (
+        <Loader />
+      ) : (
+        <table className={listStyle.table}>
+          <thead>
+            <tr>
+              <th>Todo</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>{" "}
+          </thead>
+          <tbody>
+            {todoItems.map(todo => (
+              <tr key={todo.id}>
+                <td>
+                  <ListItem id={todo.id} title={todo.title} completed={todo.completed} />
+                </td>
+
+                <td>
+                  <ConfirmBtn onClick={() => dispatch(updateRequest(todo))} className="do">
+                    Update
+                  </ConfirmBtn>
+                  <ConfirmBtn onClick={() => dispatch(confirmDelete(todo))} className="delete">
+                    Delete
+                  </ConfirmBtn>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
       <TotalItems />
       <CompletedTodo />
     </>
