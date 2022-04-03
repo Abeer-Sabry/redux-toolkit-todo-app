@@ -1,0 +1,29 @@
+.confirm {
+  padding: 7px 10px;
+  border-color: transparent;
+  border-radius: 5px;
+  color: white;
+}
+@media (max-width: 817px) {
+  .confirm {
+    padding: 5px 5px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 660px) {
+  .confirm {
+    font-size: 12px;
+  }
+}
+@media (max-width: 523px) {
+  .confirm {
+    font-size: 11px;
+  }
+}
+@media (max-width: 484px) {
+  .confirm {
+    margin-bottom: 5px;
+    width: 50px;
+    font-size: 10px;
+  }
+}

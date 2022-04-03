@@ -1,0 +1,36 @@
+{
+  "todos": [
+    {
+      "id": 4,
+      "title": "Redux-Thunk",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Redux-Toolkit",
+      "completed": true
+    },
+    {
+      "id": 7,
+      "title": "React-Query",
+      "completed": true
+    },
+    {
+      "id": 8,
+      "title": "React",
+      "completed": true
+    },
+    {
+      "title": "React Router Dom",
+      "completed": false,
+      "id": 9
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

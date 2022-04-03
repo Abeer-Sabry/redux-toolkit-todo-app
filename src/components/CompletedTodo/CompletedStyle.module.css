@@ -1,0 +1,71 @@
+.wrapper {
+  margin-top: 50px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding: 10px;
+  margin: 10px;
+}
+.completed {
+  display: flex;
+  align-items: center;
+}
+.checked {
+  color: rgb(0, 153, 0);
+  margin-right: 7px;
+}
+.title {
+  color: rgb(74, 64, 223);
+  font-weight: bold;
+}
+.icons {
+  display: flex;
+  align-items: center;
+}
+.undo {
+  color: rgb(74, 64, 223);
+  margin-right: 12px;
+}
+.delete {
+  color: brown;
+  font-size: 18px;
+}
+@media (max-width: 574px) {
+  .heading {
+    font-size: 13px;
+  }
+  .undo {
+    font-size: 13px;
+  }
+  .delete {
+    font-size: 17px;
+  }
+}
+@media (max-width: 524px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-left: 20px;
+  }
+  .heading {
+    font-size: 13px;
+  }
+}
+@media (max-width: 459px) {
+  .heading {
+    font-size: 12px;
+  }
+}
+@media (max-width: 392px) {
+  .heading {
+    font-size: 11px;
+  }
+}

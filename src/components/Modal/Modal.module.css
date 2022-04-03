@@ -1,0 +1,8 @@
+.btnDiv {
+  text-align: right;
+}
+.modalTitle {
+  color: rgb(74, 64, 223);
+  text-transform: capitalize;
+  font-weight: bold;
+}

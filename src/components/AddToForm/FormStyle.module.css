@@ -1,0 +1,31 @@
+.divContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.divInput {
+  padding: 8px 20px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 5px;
+  margin-right: 7px;
+}
+
+@media (max-width: 660px) {
+  .divContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .formDiv {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .divInput {
+    width: 100%;
+  }
+}
+@media (max-width: 468px) {
+  .create {
+    width: 100%;
+  }
+}

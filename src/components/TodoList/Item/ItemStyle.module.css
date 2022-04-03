@@ -1,0 +1,33 @@
+.list {
+  margin: 10px 0;
+  padding-bottom: 10px;
+}
+.check {
+  margin-right: 7px;
+}
+.btn {
+  background-color: brown;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 10px;
+  color: white;
+}
+@media (max-width: 991px) {
+  .list {
+    width: 100%;
+  }
+}
+@media (max-width: 523px) {
+  .checkDiv {
+    width: 100%;
+    text-align: left;
+  }
+  .box {
+    font-size: 14px;
+  }
+}
+@media (max-width: 468px) {
+  .box {
+    font-size: 12px;
+  }
+}
