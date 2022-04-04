@@ -12,6 +12,7 @@ const UpdateModal = () => {
   // REDUX
   const dispatch = useDispatch();
   const { updatingModal, updateTodo } = useSelector(state => state.update);
+
   // STATE
   const [obj, setObj] = useState({});
   // FUNC

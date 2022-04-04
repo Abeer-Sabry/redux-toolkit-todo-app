@@ -22,12 +22,19 @@
     width: 100%;
     text-align: left;
   }
-  .box {
-    font-size: 14px;
-  }
 }
-@media (max-width: 468px) {
+@media (max-width: 485px) {
   .box {
     font-size: 12px;
+  }
+}
+@media (max-width: 477px) {
+  .box {
+    font-size: 11px;
+  }
+}
+@media (max-width: 470px) {
+  .box {
+    font-size: 10px;
   }
 }

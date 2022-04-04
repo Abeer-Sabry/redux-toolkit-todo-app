@@ -28,7 +28,7 @@ const AddToForm = () => {
           defaultValue={searchValue}
           onChange={e => setSearchValue(e.target.value)}
         />
-        <ConfirmBtn type="submit" className="do">
+        <ConfirmBtn type="submit" className={`${Style.button} do`}>
           Search
         </ConfirmBtn>
       </form>

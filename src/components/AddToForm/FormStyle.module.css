@@ -8,6 +8,10 @@
   border-radius: 5px;
   margin-right: 7px;
 }
+.button {
+  padding: 8px 12px;
+  text-align: center;
+}
 
 @media (max-width: 660px) {
   .divContainer {
@@ -19,12 +23,26 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .divInput {
     width: 100%;
   }
 }
-@media (max-width: 468px) {
+@media (max-width: 484px) {
+  .button {
+    width: 25%;
+    font-size: 12px;
+  }
+  .divInput {
+    width: 75%;
+  }
+  .formDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .create {
     width: 100%;
   }

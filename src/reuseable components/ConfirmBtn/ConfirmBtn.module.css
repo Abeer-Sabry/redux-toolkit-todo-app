@@ -6,7 +6,7 @@
 }
 @media (max-width: 817px) {
   .confirm {
-    padding: 5px 5px;
+    padding: 5px;
     font-size: 13px;
   }
 }
@@ -25,5 +25,14 @@
     margin-bottom: 5px;
     width: 50px;
     font-size: 10px;
+    padding: 3px;
+  }
+}
+@media (max-width: 470px) {
+  .confirm {
+    margin-bottom: 5px;
+    width: 40px;
+    font-size: 7px;
+    padding: 3px;
   }
 }
