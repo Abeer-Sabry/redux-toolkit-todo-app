@@ -32,10 +32,12 @@
 @media (max-width: 484px) {
   .button {
     width: 25%;
-    font-size: 12px;
+    padding: 7px 12px;
+    font-size: 10px;
   }
   .divInput {
     width: 75%;
+    padding: 5px 20px;
   }
   .formDiv {
     width: 100%;
@@ -45,5 +47,6 @@
   }
   .create {
     width: 100%;
+    font-size: 12px;
   }
 }

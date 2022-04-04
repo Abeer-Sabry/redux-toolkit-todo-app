@@ -24,17 +24,7 @@
   }
 }
 @media (max-width: 485px) {
-  .box {
+  /* .box {
     font-size: 12px;
-  }
-}
-@media (max-width: 477px) {
-  .box {
-    font-size: 11px;
-  }
-}
-@media (max-width: 470px) {
-  .box {
-    font-size: 10px;
-  }
+  } */
 }

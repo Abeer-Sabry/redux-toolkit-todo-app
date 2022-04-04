@@ -3,6 +3,7 @@
   margin-bottom: 20px;
   font-weight: 600;
 }
+
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -21,4 +22,24 @@
 }
 .table td {
   padding: 10px 30px;
+}
+@media (max-width: 484px) {
+  .table thead {
+    display: none;
+  }
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .table tbody tr:first-of-type {
+    border-top: 1px solid rgb(222, 222, 222);
+  }
+  .table th,
+  .table th {
+    padding: 0;
+  }
 }
