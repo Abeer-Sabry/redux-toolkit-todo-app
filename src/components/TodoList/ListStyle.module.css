@@ -34,6 +34,8 @@
     width: 100%;
     display: block;
     text-align: center;
+    margin: 7px 0;
+    padding: 2px;
   }
   .table tbody tr:first-of-type {
     border-top: 1px solid rgb(222, 222, 222);
