@@ -2,20 +2,23 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // GET_ACTION
 import { getCompletedAsync, getTodoAsync } from "../todoSlice";
 
-export const deleteTodoAsync = createAsyncThunk("deleteTodo/deleteTodoAsync", async (id, thunkAPI) => {
-  const { dispatch } = thunkAPI;
-  try {
-    await fetch(`https://abeer-sabry-rest-api.herokuapp.com/todos/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    dispatch(getTodoAsync());
-    dispatch(getCompletedAsync());
-    return id;
-  } catch (error) {}
-});
+export const deleteTodoAsync = createAsyncThunk(
+  "deleteTodo/deleteTodoAsync",
+  async (id, thunkAPI) => {
+    const { dispatch } = thunkAPI;
+    try {
+      await fetch(`https://todo-api-f07r.onrender.com/todos/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      dispatch(getTodoAsync());
+      dispatch(getCompletedAsync());
+      return id;
+    } catch (error) {}
+  }
+);
 
 const deleteSlice = createSlice({
   name: "deleteTodo",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // ---- REDUX ---- //
 import { useDispatch } from "react-redux";
-import { getTodoAsync } from "../../Redux/todoSlice";
+import { getSearchedTodo } from "../../Redux/todoSlice";
 import { createTodo } from "../../Redux/postSlice/postSlice";
 // ---- COMPONENTS ---- //
 import ConfirmBtn from "../../reuseable components/ConfirmBtn/ConfirmBtn";
@@ -16,7 +16,8 @@ const AddToForm = () => {
   // FUNCS
   const searchHandler = e => {
     e.preventDefault();
-    dispatch(getTodoAsync(searchValue));
+    dispatch(getSearchedTodo(searchValue));
+    setSearchValue("");
   };
 
   return (
@@ -25,7 +26,7 @@ const AddToForm = () => {
         <input
           className={Style.divInput}
           type="text"
-          defaultValue={searchValue}
+          value={searchValue}
           onChange={e => setSearchValue(e.target.value)}
         />
         <ConfirmBtn type="submit" className={`${Style.button} do`}>

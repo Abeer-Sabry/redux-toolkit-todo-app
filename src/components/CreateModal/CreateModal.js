@@ -31,7 +31,12 @@ const CreateModal = () => {
         <ModalContainer ModalContainer h2={"Create Todo"}>
           <form onSubmit={onSubmitHandler}>
             <label className={Style.label}>Your Todo</label>
-            <input className={Style.input} type="text" value={value} onChange={e => setValue(e.target.value)} />{" "}
+            <input
+              className={Style.input}
+              type="text"
+              value={value}
+              onChange={e => setValue(e.target.value)}
+            />{" "}
             <div className={Style.divBtn}>
               <ConfirmBtn onClick={onSubmitHandler} className="do">
                 Create

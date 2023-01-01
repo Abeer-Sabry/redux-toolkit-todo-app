@@ -3,22 +3,25 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getCompletedAsync, getTodoAsync } from "../todoSlice";
 
 // UPDATE_TODO
-export const updateTodoAsync = createAsyncThunk("update/updateTodoAsync", async (data, thunkAPI) => {
-  const { dispatch } = thunkAPI;
-  try {
-    await fetch(`https://abeer-sabry-rest-api.herokuapp.com/todos/${data.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...data }),
-    });
+export const updateTodoAsync = createAsyncThunk(
+  "update/updateTodoAsync",
+  async (data, thunkAPI) => {
+    const { dispatch } = thunkAPI;
+    try {
+      await fetch(`https://todo-api-f07r.onrender.com/todos/${data.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data }),
+      });
 
-    dispatch(getTodoAsync());
-    dispatch(getCompletedAsync());
-    return { ...data };
-  } catch (error) {}
-});
+      dispatch(getTodoAsync());
+      dispatch(getCompletedAsync());
+      return { ...data };
+    } catch (error) {}
+  }
+);
 const updateSlice = createSlice({
   name: "update",
   initialState: {

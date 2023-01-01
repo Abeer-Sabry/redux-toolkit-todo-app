@@ -22,7 +22,10 @@ const CompletedTodo = () => {
       {completedItems.map(item => (
         <div className={Style.info} key={item.id}>
           <div className={Style.completed}>
-            <span className={Style.checked}>
+            <span
+              className={Style.checked}
+              onClick={() => dispatch(updateTodoAsync({ ...item, completed: !item.completed }))}
+            >
               {" "}
               <FaCheckSquare />
             </span>
